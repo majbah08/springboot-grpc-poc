@@ -1,0 +1,21 @@
+syntax="proto3";
+
+package com.majbah.springgrpcpoc;
+
+service BookService {
+rpc createBook (BookCreateRequest ) returns (BookCreateResponse) {
+}
+}
+
+message BookCreateRequest {
+  string bookName = 1;
+  string authorName = 2;
+  string tag = 3;
+}
+
+
+message BookCreateResponse {
+  string bookName = 1;
+}
+
+
