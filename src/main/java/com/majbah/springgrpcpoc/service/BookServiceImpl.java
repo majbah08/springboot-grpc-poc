@@ -4,8 +4,10 @@ import com.majbah.springgrpcpoc.BookGrpc;
 import com.majbah.springgrpcpoc.BookService;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 @Slf4j
+@Component
 public class BookServiceImpl extends BookGrpc.BookImplBase {
 
     @Override
