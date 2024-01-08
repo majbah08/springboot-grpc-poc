@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package bookgrpc;  //The package here is used for conflict resolution
+// if, say, we have multiple classes/members with the same name.
+
+option java_package = "com.majbah.springgrpcpoc";
+option java_outer_classname = "BookService";
+
+service Book {
+  rpc create (BookCreateRequest) returns (BookCreateResponse) {
+  }
+}
+
+message BookCreateRequest {
+  string bookName = 1;
+  string authorName = 2;
+  optional string tag = 3;
+  optional int32 id = 4;
+}
+
+
+message BookCreateResponse {
+  string bookName = 1;
+}
+
+
